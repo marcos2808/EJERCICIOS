@@ -2,12 +2,8 @@ body{
     background-color: khaki;
 }
 
-#titulo1{
-    margin-left: 20px;
-}
-
-#titulo1::highlight{
-    color: #ccc;;
+.titulos{
+    text-align: center;
 }
 .principal{
       /* Fondo */
@@ -27,7 +23,7 @@ body{
   margin: 5px auto; /* Centra la caja horizontalmente y le da margen arriba/abajo */
 
   /* Ancho máximo (opcional, para que no se extienda por toda la pantalla) */
-  max-width: 95%; /* La caja no será más ancha de 600px */
+  max-width: 100%; /* La caja no será más ancha de 600px */
 }
 
 #secundario{
@@ -42,6 +38,10 @@ body{
 
 #link:hover{
     cursor: pointer;;
+}
+
+#link{
+    text-align: center;
 }
 
 .t{
