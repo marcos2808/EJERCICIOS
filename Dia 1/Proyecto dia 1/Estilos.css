@@ -36,14 +36,27 @@ body{
     max-width: 100%;
 }
 
-#link:hover{
+#tercero{
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 3px 3px 7px rgba(1, 1, 1, 0.5);
+    margin: 7px auto;
+    max-width: 100%;
+}
+
+.menu:hover{
     cursor: pointer;;
 }
 
-#link{
+.menu a[href]{
+    color: black;
+    text-decoration: none;
+}
+.menu{
     text-align: center;
 }
-
 .t{
     font-weight: bolder;
     font-style: italic;
