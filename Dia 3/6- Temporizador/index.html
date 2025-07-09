@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+</head>
+<body>
+
+    <input type="number" id="tiempoElegido">
+    <button onclick="comenzarTiempo()">Alarma</button>
+
+    <script>
+
+        let elementoSegundos = document.getElementById("tiempoElegido");
+        function comenzarTiempo(){
+            setTimeout(tiempoCumplido, 1000 * elementoSegundos.value)
+        }
+
+        function tiempoCumplido(){
+            alert("se acabo el tiempo")
+        }
+    </script>
+</body>
+</html>
