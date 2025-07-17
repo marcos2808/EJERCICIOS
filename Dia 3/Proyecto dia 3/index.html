@@ -19,15 +19,60 @@
     <input type="text" id="textoInput4">
     <p>¿Nombre completo del libertador?</p>
     <input type="text" id="textoInput5">
-    <p>¿Muerte del libertador?</p>
-    <input type="text" id="textoInput6">
     <br> <br> <br>
 
     <button onclick="finalizo()">Gane!!!</button>
     <br><br>
     <button onclick="reiniciar()">Reiniciar</button>
     <script>
-        setInterval()
+        let tiempoTerminado;
+        let intervaloDeTiempo;
+
+        function comenzarRegresion(){
+            tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+            intervaloDeTiempo = setInterval(tictac, 1000);
+
+            document.getElementById("cuentaRegresiva").textContent = 30;
+
+        }
+
+        function tictac(){
+            let tiempo = document.getElementById("cuentaRegresiva").textContent;
+            document.getElementById("cuentaRegresiva").textContent = tiempo - 1;
+
+
+        }
+
+        function tiempoCumplido(){
+            clearInterval(intervaloDeTiempo);
+            document.getElementById("cuentaRegresiva").textContent = 0;
+            alert("GAME OVER: SIGUE INTENTANTO")
+        }
+
+        function finalizo(){
+            clearTimeout(tiempoTerminado);
+            clearInterval(intervaloDeTiempo);
+            let fecha = new Date();
+            let respuesta1 = document.getElementById("textoInput").value;
+            let respuesta2 = document.getElementById("textoInput2").value;
+            let respuesta3 = document.getElementById("textoInput3").value;
+            let respuesta4 = document.getElementById("textoInput4").value;
+            let respuesta5 = document.getElementById("textoInput5").value;
+
+            let mensaje = fecha.toLocaleDateString("es-ES") + "\n" + 
+                            "1. " + respuesta1 + "\n" +
+                            "2. " + respuesta2 + "\n" +
+                            "3. " + respuesta3 + "\n" +
+                            "4. " + respuesta4 + "\n" +
+                            "5. " + respuesta5;
+            alert(mensaje)
+        }
+
+        function reiniciar(){
+            location.reload();
+
+        }
+
     </script>
 </body>
 </html>
